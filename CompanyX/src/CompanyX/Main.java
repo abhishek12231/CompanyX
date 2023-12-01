@@ -71,7 +71,7 @@ public class Main {
         String customerName = names[random.nextInt(names.length)]; // this gets a random name from the array above
         String[] orderTypes = {"Bulk", "Rush", "Favor", ""}; // order type "" - is means default
         String orderType = orderTypes[random.nextInt(orderTypes.length)]; // this gets random order listed above
-        int processingTime = random.nextInt(10) + 1; // random processing time between 1 and 10 days
+        int processingTime = random.nextInt(1,10); // random processing time between 1 and 10 days
 
         return new Customer(orderNum, customerName, orderType, processingTime); // returning a new 
 //customer object with the generated
