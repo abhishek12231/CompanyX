@@ -37,10 +37,6 @@ public class processing {
 		//customer.setOrderType(type);
 		customer.setPriorty(priorty); // setting priorty
 		
-		  // Generate random processing time between 1 and 10 days
-        Random random = new Random();
-        int processingTime = random.nextInt(10) + 1;
-        customer.setProcessingTime(processingTime);
 		
 		orderInfo.add(customer); // adding to the queue
 		

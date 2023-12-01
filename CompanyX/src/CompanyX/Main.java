@@ -44,7 +44,7 @@ public class Main {
         */
 		
 		// generating a random number of orders between 1 and 5 
-        Random random = new Random(); // ramdom number creater
+        Random random = new Random(); // random number generator
         int numberOfOrders = random.nextInt(1,5); // pass in the value how many orders i want to run between 1 and 5
 
         System.out.println("Generating " + numberOfOrders + " random orders..."); // print a line saying this so ik how many orders i am printing
@@ -67,15 +67,14 @@ public class Main {
         Random random = new Random();
 
         int orderNum = random.nextInt(1, 1000000); // randomizing order number between 1 and 1000000
-        String[] names = {"John", "Abhi", "James", "Anna", "Emma"}; // names for people to add into the queue or the line for the priorty
+        String[] names = {"John", "Abhi", "James", "Anna", "Emma"}; // names for people to add into the queue or the line for the priority
         String customerName = names[random.nextInt(names.length)]; // this gets a random name from the array above
         String[] orderTypes = {"Bulk", "Rush", "Favor", ""}; // order type "" - is means default
         String orderType = orderTypes[random.nextInt(orderTypes.length)]; // this gets random order listed above
         int processingTime = random.nextInt(10) + 1; // random processing time between 1 and 10 days
 
-        return new Customer(orderNum, customerName, orderType, processingTime); // returning the 
-//orderNum, name, type and the time than this is called into the for loop in the main method to 
-//generate orders 
+        return new Customer(orderNum, customerName, orderType, processingTime); // returning a new 
+//customer object with the generated
     }
 	
 
