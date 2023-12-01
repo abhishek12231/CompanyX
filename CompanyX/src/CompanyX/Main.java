@@ -62,18 +62,20 @@ public class Main {
 
 	}
 	private static Customer generateRandomOrder(int orderNumber) { //A method to generate a 
-//random Customer object with random attributessends value to the customer class than it gets 
+//random Customer object with random attributes sends value to the customer class than it gets 
 //processed in the processing class
         Random random = new Random();
 
-        int orderNum = random.nextInt(1, 1000000); // randomizing orderId between 1 and 1000000
+        int orderNum = random.nextInt(1, 1000000); // randomizing order number between 1 and 1000000
         String[] names = {"John", "Abhi", "James", "Anna", "Emma"}; // names for people to add into the queue or the line for the priorty
         String customerName = names[random.nextInt(names.length)]; // this gets a random name from the array above
         String[] orderTypes = {"Bulk", "Rush", "Favor", ""}; // order type "" - is means default
         String orderType = orderTypes[random.nextInt(orderTypes.length)]; // this gets random order listed above
-        int processingTime = random.nextInt(10) + 1; // Random processing time between 1 and 10 days
+        int processingTime = random.nextInt(10) + 1; // random processing time between 1 and 10 days
 
-        return new Customer(orderNum, customerName, orderType, processingTime); // returning the orderNum, name, type and the time than this 
+        return new Customer(orderNum, customerName, orderType, processingTime); // returning the 
+//orderNum, name, type and the time than this is called into the for loop in the main method to 
+//generate orders 
     }
 	
 
