@@ -38,11 +38,13 @@ public class Main {
         
         processingSystem.processedOrder(); // orders being processed
         
-        // this code was generated without any loops and we had to manually give values to ity
+        // this code was generated without any loops and we had to manually give values to it but 
+//with loops below we give names in one method and than it takes names from there and a random order 
+//type so then it calls the loop and it generate only up to 5 orders randomly.
         */
 		
-		// Generate a random number of orders (between 1 and 5 in this example)
-        Random random = new Random(); // ramdom creater
+		// generating a random number of orders between 1 and 5 
+        Random random = new Random(); // ramdom number creater
         int numberOfOrders = random.nextInt(1,5); // pass in the value how many orders i want to run between 1 and 5
 
         System.out.println("Generating " + numberOfOrders + " random orders..."); // print a line saying this so ik how many orders i am printing
@@ -59,7 +61,9 @@ public class Main {
         processingSystem.processedOrder(); // calling the processed order method in customer
 
 	}
-	private static Customer generateRandomOrder(int orderNumber) {
+	private static Customer generateRandomOrder(int orderNumber) { //A method to generate a 
+//random Customer object with random attributessends value to the customer class than it gets 
+//processed in the processing class
         Random random = new Random();
 
         int orderNum = random.nextInt(1, 1000000); // randomizing orderId between 1 and 1000000
@@ -69,7 +73,7 @@ public class Main {
         String orderType = orderTypes[random.nextInt(orderTypes.length)]; // this gets random order listed above
         int processingTime = random.nextInt(10) + 1; // Random processing time between 1 and 10 days
 
-        return new Customer(orderNum, customerName, orderType, processingTime); // returning the orderNum, name, type and the time
+        return new Customer(orderNum, customerName, orderType, processingTime); // returning the orderNum, name, type and the time than this 
     }
 	
 
